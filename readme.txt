@@ -65,4 +65,20 @@ git branch 查看branch
 $ git switch -c dev
 直接切换到已有的master分支，可以使用：
 $ git switch master
-ss
+
+准备合并dev分支，请注意--no-ff参数，表示禁用Fast forward：
+
+$ git merge --no-ff -m "merge with no-ff" dev
+工作区是干净的，刚才的工作现场存到哪去了？用git stash list命令看看：
+工作现场还在，Git把stash内容存在某个地方了，但是需要恢复一下，有两个办法：
+
+一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除；
+
+另一种方式是用git stash pop，恢复的同时把stash内容也删了：
+然后恢复指定的stash，用命令：
+
+$ git stash apply stash@{0}
+复制一个特定的提交到当前分支：
+
+$ git cherry-pick 4c805e2
+git push origin master
