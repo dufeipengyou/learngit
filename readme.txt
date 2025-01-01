@@ -44,3 +44,25 @@ git remote -v  查看远程数据库
 git remote rm origin 删除本地和远程的绑定关系，需要删除远程的需要取github网址删除
 
 git clone git@github.com:michaelliao/gitskills.git
+
+git checkout -b dev
+git branch
+git checkout master
+
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>或者git switch <name>
+创建+切换分支：git checkout -b <name>或者git switch -c <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
+git log --graph命令可以看到分支合并图。
+
+cat readme.txt  查看文件
+git branch -d dev 删除分支
+git branch 查看branch
+
+创建并切换到新的dev分支，可以使用：
+$ git switch -c dev
+直接切换到已有的master分支，可以使用：
+$ git switch master
+ss
