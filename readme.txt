@@ -44,3 +44,6 @@ git remote -v  查看远程数据库
 git remote rm origin 删除本地和远程的绑定关系，需要删除远程的需要取github网址删除
 
 git clone git@github.com:michaelliao/gitskills.git
+
+
+xx
