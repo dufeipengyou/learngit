@@ -11,8 +11,12 @@ git log
 如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
 git log --pretty=oneline
 
+回退版本
 git reset --hard HEAD^
 所以写成HEAD~100
 --hard会回退到上个版本的已提交状态，而--soft会回退到上个版本的未提交状态，--mixed会回退到上个版本已添加但未提交的状态。
 
 git reflog用来记录你的每一次命令：
+(use "git restore --staged <file>..." to unstage)
+用git diff HEAD -- readme.txt命令可以查看工作区和版本库里面最新版本的区别：
+git checkout -- file可以丢弃工作区的修改：
