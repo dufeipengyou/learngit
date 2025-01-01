@@ -6,3 +6,13 @@
 使用命令git commit -m <message>，完成。
 Git add Untitled-1.txt
 git commit -m "wrote a Untitled-1 file"
+git status
+git log
+如果嫌输出信息太多，看得眼花缭乱的，可以试试加上--pretty=oneline参数：
+git log --pretty=oneline
+
+git reset --hard HEAD^
+所以写成HEAD~100
+--hard会回退到上个版本的已提交状态，而--soft会回退到上个版本的未提交状态，--mixed会回退到上个版本已添加但未提交的状态。
+
+git reflog用来记录你的每一次命令：
